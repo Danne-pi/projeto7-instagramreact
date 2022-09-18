@@ -1,6 +1,5 @@
 import NavBar from './components/NavBar.js'
 import Body from './components/Body.js'
-import './styles/Body.css';
 
 function App() {
   return (

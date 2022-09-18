@@ -1,0 +1,38 @@
+header{
+    position: fixed;
+    height: 60px;
+    width: 100%;
+    background: #FFFFFF;
+    border: 1px solid #DBDBDB;
+    top: 0;
+    display: flex;
+    left: 0;
+    z-index: 3;
+    justify-content: center;
+}
+header .deskcontent{
+display: none;
+}
+header .mobicontent{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 22px;
+}
+header img{
+    height: 39px;
+    transform: translate(0px, 5.5px);
+}
+#spacing{
+    transform: translate(4px, 0px);
+    width: none;
+    border: none;
+}
+header span{
+    transform: translateY(-2.6px);
+}
+header span img{
+    height: 24px;
+}

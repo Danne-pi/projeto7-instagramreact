@@ -1,0 +1,54 @@
+@import "home/elements/header.css"; 
+@import "home/elements/stories.css";
+@import "home/elements/posts.css";
+@import "home/elements/sidebar.css";
+
+*{
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+body{
+    width: auto;
+    margin: auto;
+    align-content: center;
+    background-color: #FAFAFA;
+    overflow-x: hidden;
+    font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.main-div{
+    /* background-color: aqua; */
+    margin: auto;
+    margin-top: 60px;
+    height: 2000px;
+    width: 935px;
+    display: flex;
+    justify-content: center;
+}
+.pcontent{
+    /* background-color: beige; */
+    width: 614px;
+    height: 100%;
+}
+.sbcontent{
+    /* background-color: azure; */
+    width: 293px;
+    height: 100%;
+}
+.content-saver{
+    height: 32px;
+    border: 1px solid transparent;
+}
+.bottom-bar{
+    display: none;
+}
+.bottom-bar img{
+    display: none;
+}
