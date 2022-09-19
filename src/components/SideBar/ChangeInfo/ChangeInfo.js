@@ -6,19 +6,37 @@ shadowy.classList.add("shadowy")
 popup.classList.add("changeBox")
 
 export default function ChangeInfo(){
-    popup.innerHTML = (
-`
-<div class="textfield">
-    <div class="closeBtn">
-        <ion-icon name="close-circle"></ion-icon>
-    </div> 
-    <ion-icon name="person"></ion-icon>
-    <input type="text" id="fname" name="fname" placeholder="Nome de usuário">
-    <input type="text" id="lname" name="lname" placeholder="Seu nome">
-    <input type="url" id="pname" name="pname" placeholder="Link da sua foto"><br>
-    <button id="clickaqui">Confirmar</button>
-</div>
-`)
+    console.log(localStorage.getItem("thisUsername"))
+    if(localStorage.getItem("thisUsername") === null ){
+        popup.innerHTML = (
+            `
+            <div class="textfield" id="lateshow">
+                <div class="closeBtn">
+                    <ion-icon name="close-circle"></ion-icon>
+                </div> 
+                <ion-icon name="person"></ion-icon>
+                <input type="text" id="fname" name="fname" placeholder="Nome de usuário">
+                <input type="text" id="lname" name="lname" placeholder="Seu nome">
+                <input type="url" id="pname" name="pname" placeholder="Link da sua foto"><br>
+                <button id="clickaqui">Confirmar</button>
+            </div>
+        `)
+        document.body.appendChild(shadowy)
+        document.body.appendChild(popup)
+    }else{
+        popup.innerHTML = (
+            `
+            <div class="closeBtn">
+                <ion-icon name="close-circle"></ion-icon>
+            </div> 
+            <div class="profileLogout" id="lateshow">
+                <img src="${localStorage.getItem("thisImage")}" alt="">
+                <h1>${localStorage.getItem("thisUsername")}</h1>
+                <h2>${localStorage.getItem("thisName")}</h2>
+                <button>Sair</button>
+            </div>
+            `)
+    }
     document.body.appendChild(shadowy)
     document.body.appendChild(popup)
     setTimeout(() => {
@@ -29,13 +47,18 @@ export default function ChangeInfo(){
         popup.style.width = "375px"
         popup.style.height = "400px"
     }, 120);
+
     setTimeout(() => {
-        document.querySelector(".textfield").style.opacity=1
+        document.querySelector("#lateshow").style.opacity=1
     }, 1500);
 
-    document.querySelector("#clickaqui").addEventListener("click", submit)
-    document.querySelector(".closeBtn").addEventListener("click", justCloseIt)
-
+    if(localStorage.getItem("thisUsername") === null ){
+        document.querySelector("#clickaqui").addEventListener("click", submit)
+        document.querySelector(".closeBtn").addEventListener("click", justCloseIt)
+    }else{
+        document.querySelector(".profileLogout button").addEventListener("click", logOutBaby)
+        document.querySelector(".closeBtn").addEventListener("click", justCloseIt)
+    }
 }
 function submit(){
     let thisUsername = "" + document.querySelector("#fname").value
@@ -94,7 +117,9 @@ function errorAlert(){
     document.querySelector(".myAlert button").addEventListener("click", onConfirm)
 }
 function justCloseIt(){
-    shadowy.remove()
-    popup.remove()
+    document.location.reload()
+}
+function logOutBaby(){
+    localStorage.clear()
     document.location.reload()
 }
