@@ -1,0 +1,111 @@
+.shadowy{
+    background-color: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 99;
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+}
+.changeBox{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    background-color: white;
+    width: 0;
+    height: 0;
+    position: fixed;
+    bottom: -100%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    z-index: 100;
+    transition: all 1s ease-out, width 1s ease-in-out, height 1s ease-in-out;
+}
+.textfield {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+    margin: 20px;
+    opacity: 0;
+    z-index: 102;
+    transition: all 0.6s ease-in;
+}
+.textfield ion-icon{
+    font-size: 80px;
+    color: gray;
+    margin-bottom: 20px;
+    margin-inline: auto;
+    text-align: center;
+}
+.textfield input{
+    width: 100%;
+    border: gray 1px solid;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 18px;
+    margin-block: 4px;
+}
+.textfield button {
+    font-weight: 500;
+    font-size: 20px;
+    color: white;
+    background-color: rgb(89, 255, 47);
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    width: 100%;
+    cursor: pointer;
+}
+.myAlert{
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    padding: 22px;
+    border-radius: 16px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: auto;
+    width: 320px;
+    background-color: white;
+    z-index: 999;
+    opacity: 0;
+    transition: all 0.5s ease-in;
+}
+.myAlert h3{
+    font-size: 20px;
+    font-weight: 400;
+    color: rgb(29, 29, 29);
+}
+.myAlert ul{
+    margin-left: 2px;
+    padding: 16px;
+}
+.myAlert li{
+    font-size: 14px;
+    font-weight: 400;
+    color: rgb(29, 29, 29);
+}
+.myAlert ion-icon{
+    margin-bottom: 16px;
+    margin-inline: auto;
+    text-align: center;
+    font-size: 72px;
+    color: rgb(255, 34, 34);
+}
+.myAlert button{
+    border-radius: 21px;
+    font-weight: 400;
+    color: white;
+    border: none;
+    background-color: rgb(255, 34, 34);
+    padding: 12px;
+    cursor: pointer;
+}

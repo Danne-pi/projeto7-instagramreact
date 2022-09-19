@@ -39,7 +39,7 @@
     position: absolute;
     z-index: 1;
     left: 16px;
-    display: unset;
+    display: none;
     transform: rotate(180deg);
 }
 .stories .button img, .stories .button2 img{

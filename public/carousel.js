@@ -7,8 +7,6 @@ document.body.onmousedown = function(e) { if (e.button === 1) return false; }
 let scrollrestante = swrapper.scrollWidth - 614;
 let clicks = 0;
 
-btn2.style.display = 'none';
-
 function right() {
     if (scrollrestante > 0){
         clicks ++;
@@ -28,7 +26,6 @@ function left() {
         btn2.style.display = 'unset';
         btn1.style.display = 'unset';
     }
-    console.log(scrollrestante);
     swrapper.scrollBy(-350,0);
     if (clicks <= 0) {
         btn2.style.display = 'none';

@@ -34,7 +34,7 @@
 }
 .stories .button2{
     background-color: transparent;
-    display: unset;
+    display: none;
     cursor: pointer;
     border: none;
     position: absolute;

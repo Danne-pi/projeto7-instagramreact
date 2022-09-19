@@ -5,19 +5,25 @@
     padding-left: 28px;
     border: 1px solid transparent;
 }
-.sidebar .heading a{
+.sidebar .heading .content{
     margin-top: 22px;
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 .sidebar .heading img{
     height: 56px;
     width: 56px;
     border-radius: 50%;
 }
-.sidebar .heading div{
+.sidebar .heading .sb-content{
     display: grid;
     margin-left: 16px;
+}
+.sidebar .heading ion-icon{
+    margin-left: 4px;
+    height: 10px;
+    width: 10px;
 }
 .sidebar .heading .title{
     font-size: 14px;

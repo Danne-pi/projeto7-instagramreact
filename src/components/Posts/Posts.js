@@ -19,9 +19,9 @@ function PostList(){
             }
             <div className="actions">
                 <span>
-                    <a href="./"><img src="assets/icons/like.svg" alt=""></img></a>
-                    <a href="./"><img src="assets/icons/coment.svg" alt=""></img></a>
-                    <a href="./"><img id="correction" src="assets/icons/send.svg" alt=""></img></a>
+                    <img src="assets/icons/like.svg" alt=""></img>
+                    <img src="assets/icons/coment.svg" alt=""></img>
+                    <img id="correction" src="assets/icons/send.svg" alt=""></img>
                 </span>
                 <a href="./"><img src="assets/icons/save.svg" alt=""></img></a>
             </div>
