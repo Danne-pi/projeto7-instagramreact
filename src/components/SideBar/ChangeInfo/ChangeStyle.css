@@ -121,6 +121,8 @@
 }
 
 .profileLogout{
+    align-items: center;
+    justify-content: center;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -131,12 +133,17 @@
 }
 
 .profileLogout img{
+    position: absolute;
+    transform: translate(-50%,-100%);
+    top: 50%;
+    left: 50%;
     object-fit: cover;
     border-radius: 30px;
     width: 150px;
     height: 150px;
 }
 .profileLogout h1{
+    margin-top: 100%;
     text-align: center;
 }
 .profileLogout h2{
