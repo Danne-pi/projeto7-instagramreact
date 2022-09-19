@@ -1,6 +1,6 @@
-import Stories from "./Stories.js"
-import Posts from "./Posts.js"
-import SideBar from "./SideBar.js"
+import Stories from "../Stories/Stories.js"
+import Posts from "../Posts/Posts.js"
+import SideBar from "../SideBar/SideBar.js"
 import BottomBar from "./BottomBar.js"
 
 export default function Body(){

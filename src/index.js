@@ -3,4 +3,9 @@ import App from './App';
 
 
 ReactDOM.render(App(), document.querySelector(".root"))
-document.body.onmousedown = function(e) { if (e.button === 1) return false; }
+
+
+const scriptElement=document.createElement('script');
+scriptElement.type = 'text/javascript';
+scriptElement.src = "./carousel.js";
+document.head.appendChild(scriptElement);
