@@ -9,6 +9,9 @@ export default function ChangeInfo(){
     popup.innerHTML = (
 `
 <div class="textfield">
+    <div class="closeBtn">
+        <ion-icon name="close-circle"></ion-icon>
+    </div> 
     <ion-icon name="person"></ion-icon>
     <input type="text" id="fname" name="fname" placeholder="Nome de usuário">
     <input type="text" id="lname" name="lname" placeholder="Seu nome">
@@ -30,8 +33,8 @@ export default function ChangeInfo(){
         document.querySelector(".textfield").style.opacity=1
     }, 1500);
 
-    const thisButton = document.querySelector("#clickaqui")
-    thisButton.addEventListener("click", submit)
+    document.querySelector("#clickaqui").addEventListener("click", submit)
+    document.querySelector(".closeBtn").addEventListener("click", justCloseIt)
 
 }
 function submit(){
@@ -69,8 +72,8 @@ function errorAlert(){
     <ion-icon name="alert-circle-outline"></ion-icon>
     <h3>Ocorreu um erro, verifique se suas informações conferem com a lista:</h3>
     <ul>
-        <li>Username com mais do que 6 caracteres.</li>
-        <li>Nome com mais do que 8 caracteres.</li>
+        <li>Username com mais de 6 caracteres.</li>
+        <li>Nome com mais de 8 caracteres.</li>
         <li>Link funcional com https/http incluso.</li>
     </ul>
     <br>
@@ -89,4 +92,9 @@ function errorAlert(){
         }, 500);
     }
     document.querySelector(".myAlert button").addEventListener("click", onConfirm)
+}
+function justCloseIt(){
+    shadowy.remove()
+    popup.remove()
+    document.location.reload()
 }

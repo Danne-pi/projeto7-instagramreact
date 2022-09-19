@@ -5,7 +5,8 @@ const postList = [
         name:"danne.pi",
         content:"./assets/videos/inception.mp4",
         contentType: "video",
-        mainLike: "barney.rei.delas",
+        mainLikeProfile: "./assets/images/barney.jpg",
+        mainLikeName: "barney.rei.delas",
         likeCount: 145559
     },
     {

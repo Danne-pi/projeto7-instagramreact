@@ -1,0 +1,5 @@
+.likeAnimation{
+    width: 120px;
+    height: 120px;
+    transition: all 0.5s ease-in-out;
+}

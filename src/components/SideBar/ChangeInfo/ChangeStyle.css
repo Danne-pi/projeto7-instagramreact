@@ -109,3 +109,13 @@
     padding: 12px;
     cursor: pointer;
 }
+.closeBtn ion-icon{
+    border-radius: 50px;
+    background-color: white;
+    color:  rgb(255, 34, 34);;
+    position: absolute;
+    right: 16px;
+    top: -16px;
+    font-size: 32px;
+    cursor: pointer;
+}

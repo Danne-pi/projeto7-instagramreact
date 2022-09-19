@@ -10,29 +10,34 @@ function PostList(){
                     <a href="./"><img src={item.profile} alt=""></img></a>
                     <a href="./">{item.name}</a>
                 </span>
-                <a href="./"><img src="assets/icons/opt.svg" alt=""></img></a>
+                <img className="postIcon" src="assets/icons/opt.svg" alt=""></img>
             </div>
             {item.contentType === "video" ? 
-            <video className="content" src={item.content} autoPlay loop muted></video> 
+            <video className="content" src={item.content} autoPlay loop muted>
+                <img className="likeAnimation" src="./assets/icons/likecheck."></img>
+            </video> 
             :
-            <img className="content" src={item.content} alt=""></img>
+            <img className="content" src={item.content} alt="">
+                <img className="likeAnimation" src="./assets/icons/likecheck."></img>
+            </img>
             }
             <div className="actions">
                 <span>
-                    <img src="assets/icons/like.svg" alt=""></img>
-                    <img src="assets/icons/coment.svg" alt=""></img>
-                    <img id="correction" src="assets/icons/send.svg" alt=""></img>
+                    <img id="likebtn" className="postIcon" src="assets/icons/like.svg" alt=""></img>
+                    <img className="postIcon" src="assets/icons/coment.svg" alt=""></img>
+                    <img className="postIcon" id="correction" src="assets/icons/send.svg" alt=""></img>
                 </span>
-                <a href="./"><img src="assets/icons/save.svg" alt=""></img></a>
+                <img id="savebtn" className="postIcon" src="assets/icons/save.svg" alt=""></img>
             </div>
             <div className="liked">
-                <a href="./"><img src="assets/images/barney.jpg" alt=""></img></a>
-                <span>Curtido por <a href="./"><strong>{item.mainLike}</strong></a> e <a href="./"><strong>outras {toMilhar(item.likeCount)} pessoas</strong></a></span>
+                <a href="./"><img src={item.mainLikeProfile} alt=""></img></a>
+                <span>Curtido por <a href="./"><strong>{item.mainLikeName}</strong></a> e <a href="./"><strong>outras {toMilhar(item.likeCount)} pessoas</strong></a></span>
             </div>
         </div>
         )
     )
 }
+
 
 
 export default function Posts(){
